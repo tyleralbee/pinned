@@ -38,6 +38,8 @@ class ViewController: UIViewController , CLLocationManagerDelegate {
         
         //self.map.setRegion(viewRegion, animated: true)
         
+        
+        //uses homeMap (swift 5)
         self.homeMap.setRegion(viewRegion, animated: true)
     }
 
