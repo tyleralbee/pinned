@@ -8,9 +8,9 @@
 
 import UIKit
 import MapKit
-import CoreLocation
+//import CoreLocation
 
-class ViewController: UIViewController , CLLocationManagerDelegate , MKMapViewDelegate {
+class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapViewDelegate {
     
     var locationManager = CLLocationManager()
     let newPin = MKPointAnnotation()
@@ -32,7 +32,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate , MKMapViewDe
         
         
         
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.mapLongPress(_:))) // colon needs to pass through info
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(HomeMapController.mapLongPress(_:))) // colon needs to pass through info
         longPress.minimumPressDuration = 1.5 // in seconds
         //add gesture recognition
         homeMap.addGestureRecognizer(longPress)

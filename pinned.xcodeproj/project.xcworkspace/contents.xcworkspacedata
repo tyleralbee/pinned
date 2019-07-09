@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:pinned.xcodeproj">
+      location = "group:/Users/tyleralbee/Desktop/pinned/pinned/PinViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/tyleralbee/Desktop/pinned/pinned/Main.storyboard">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/tyleralbee/Desktop/pinned/pinned/ViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
