@@ -31,7 +31,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="r6J-e4-bKD">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="cUD-ym-Ewd"/>
-                        <barButtonItem key="rightBarButtonItem" title="Pin" id="8sW-Gl-siK"/>
+                        <barButtonItem key="rightBarButtonItem" title="Pin" id="8sW-Gl-siK">
+                            <connections>
+                                <segue destination="MkP-We-lrt" kind="show" id="DkS-jU-CQa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="homeMap" destination="Vi9-uc-TO8" id="ZBH-7i-fIl"/>
@@ -58,6 +62,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5v-Gv-SXm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Vu2-1E-Cmm">
+            <objects>
+                <viewController id="MkP-We-lrt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JFv-Y4-LaR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="BbB-U2-Vya">
+                                <rect key="frame" x="153" y="410" width="109" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fcO-8t-RVa">
+                                        <rect key="frame" x="42" y="0.0" width="25" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8J-Gi-qcb">
+                                        <rect key="frame" x="0.0" y="47" width="109" height="30"/>
+                                        <state key="normal" title="Pin my location!"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Nbu-S2-YY0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oj9-w2-ZKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886.9565217391305" y="126.5625"/>
         </scene>
     </scenes>
 </document>
