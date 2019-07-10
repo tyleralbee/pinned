@@ -15,7 +15,17 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
     var locationManager = CLLocationManager()
     let newPin = MKPointAnnotation()
 
+    
+    // moved to PinViewController
+//    var searchCompleter = MKLocalSearchCompleter()
+//    var searchResults = [MKLocalSearchCompletion]()
+    
+    //let pinManager = PinViewController()
+
     @IBOutlet weak var homeMap: MKMapView!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +38,8 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
+        
+        
         // add gesture recognizer
         
         
@@ -36,6 +48,10 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
         longPress.minimumPressDuration = 1.5 // in seconds
         //add gesture recognition
         homeMap.addGestureRecognizer(longPress)
+        
+        //set searchCompleter delegate
+        
+        //searchCompleter.delegate = self
     }
     
     @objc func mapLongPress(_ recognizer: UIGestureRecognizer) {
@@ -75,9 +91,10 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
         
         
         
-        
     }
+    
 
 
 }
+
 
