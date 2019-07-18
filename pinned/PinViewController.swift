@@ -58,6 +58,10 @@ extension PinViewController: MKLocalSearchCompleterDelegate {
 }
 
 extension PinViewController : UITableViewDataSource {
+    func numberOfRows(inSection: Int) -> Int {
+        return 5
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -90,5 +94,6 @@ extension PinViewController: UITableViewDelegate {
             let coordinate = response?.mapItems[0].placemark.coordinate
             print(String(describing: coordinate))
         }
+        
     }
 }
