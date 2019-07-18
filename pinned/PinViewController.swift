@@ -8,6 +8,8 @@
 import UIKit
 import MapKit
 
+var locationChosen = [CLLocationCoordinate2D]()
+
 class PinViewController: UIViewController {
 
     
@@ -93,6 +95,10 @@ extension PinViewController: UITableViewDelegate {
         search.start { (response, error) in
             let coordinate = response?.mapItems[0].placemark.coordinate
             print(String(describing: coordinate))
+            locationChosen.append(coordinate!)
+            self.navigationController?.popViewController(animated: true)
+
+            
         }
         
     }

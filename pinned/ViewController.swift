@@ -52,6 +52,11 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
         //set searchCompleter delegate
         
         //searchCompleter.delegate = self
+        
+
+        
+
+        
     }
     
     @objc func mapLongPress(_ recognizer: UIGestureRecognizer) {
@@ -63,6 +68,18 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
         
         newPin.coordinate = touchedAtCoordinate
         homeMap.addAnnotation(newPin)
+        
+        if (locationChosen.count ) > 0 {
+            for coord in locationChosen {
+                newPin.coordinate = coord
+                homeMap.addAnnotation(newPin)
+                print("new objects!")
+                
+            }
+        } else {
+            print("No objects")
+        }
+
         
         
     }
@@ -88,7 +105,6 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
         
         newPin.coordinate = userLocation!.coordinate
         homeMap.addAnnotation(newPin)
-        
         
         
     }
