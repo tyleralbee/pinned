@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 //import CoreLocation
 
+var pinSet = [MKPointAnnotation]()
+
 class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapViewDelegate {
     
     var locationManager = CLLocationManager()
@@ -69,16 +71,7 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
         newPin.coordinate = touchedAtCoordinate
         homeMap.addAnnotation(newPin)
         
-        if (locationChosen.count ) > 0 {
-            for coord in locationChosen {
-                newPin.coordinate = coord
-                homeMap.addAnnotation(newPin)
-                print("new objects!")
-                
-            }
-        } else {
-            print("No objects")
-        }
+
 
         
         
@@ -108,6 +101,25 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
         
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if (locationChosen.count ) > 0 {
+            for coord in locationChosen {
+                newPin.coordinate = coord
+                pinSet.append(newPin)
+                
+                for pin in pinSet {
+                    homeMap.addAnnotation(pin)
+                    print("new objects!")
+                    
+                }
+                
+            }
+        } else {
+            print("No objects")
+        }
+    }
+    
     
 
 

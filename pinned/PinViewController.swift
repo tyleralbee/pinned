@@ -97,6 +97,7 @@ extension PinViewController: UITableViewDelegate {
             print(String(describing: coordinate))
             locationChosen.append(coordinate!)
             self.navigationController?.popViewController(animated: true)
+            //HomeMapController.updateMap()
 
             
         }
