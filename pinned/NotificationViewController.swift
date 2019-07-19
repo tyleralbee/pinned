@@ -8,7 +8,11 @@
 
 import UIKit
 
+var notificationResults = [String]()
+
+
 class NotificationViewController: UITableViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +26,25 @@ class NotificationViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    func numberOfRows(inSection: Int) -> Int {
+        return 5
     }
-
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return notificationResults.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let notifcationResult = notificationResults[indexPath.row]
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        cell.textLabel?.text = notifcationResult
+        cell.detailTextLabel?.text = notifcationResult
+        return cell
+        
     }
 
     /*

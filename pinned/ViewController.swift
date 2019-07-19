@@ -11,18 +11,11 @@ import MapKit
 //import CoreLocation
 
 var pinSet = [MKPointAnnotation]()
+var newPin = MKPointAnnotation()
 
 class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapViewDelegate {
     
     var locationManager = CLLocationManager()
-    let newPin = MKPointAnnotation()
-
-    
-    // moved to PinViewController
-//    var searchCompleter = MKLocalSearchCompleter()
-//    var searchResults = [MKLocalSearchCompletion]()
-    
-    //let pinManager = PinViewController()
 
     @IBOutlet weak var homeMap: MKMapView!
     
@@ -55,10 +48,25 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
         
         //searchCompleter.delegate = self
         
-
-        
-
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if (locationChosen.count ) > 0 {
+            for coord in locationChosen {
+                newPin.coordinate = coord
+                pinSet.append(newPin)
+            
+                
+                for pin in pinSet {
+                    homeMap.addAnnotation(pin)
+                    print("new objects!")
+                    
+                }
+                
+            }
+        } else {
+            print("No objects")
+        }
     }
     
     @objc func mapLongPress(_ recognizer: UIGestureRecognizer) {
@@ -78,7 +86,7 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        homeMap.removeAnnotation(newPin)
+        //homeMap.removeAnnotation(newPin)
         //let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         
         //print("locations = \(locValue.latitude) \(locValue.longitude)")
@@ -98,27 +106,12 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
         
         newPin.coordinate = userLocation!.coordinate
         homeMap.addAnnotation(newPin)
+    
         
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        if (locationChosen.count ) > 0 {
-            for coord in locationChosen {
-                newPin.coordinate = coord
-                pinSet.append(newPin)
-                
-                for pin in pinSet {
-                    homeMap.addAnnotation(pin)
-                    print("new objects!")
-                    
-                }
-                
-            }
-        } else {
-            print("No objects")
-        }
-    }
+
     
     
 
