@@ -15,7 +15,6 @@
 		61A2A53F22D29E1200A56054 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A2A53D22D29E1200A56054 /* LaunchScreen.storyboard */; };
 		61A2A54A22D29E1200A56054 /* pinnedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A2A54922D29E1200A56054 /* pinnedTests.swift */; };
 		61A2A55522D29E1200A56054 /* pinnedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A2A55422D29E1200A56054 /* pinnedUITests.swift */; };
-		61B8108422D45D06003B464A /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8108322D45D06003B464A /* NotificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		61A2A55022D29E1200A56054 /* pinnedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pinnedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A2A55422D29E1200A56054 /* pinnedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinnedUITests.swift; sourceTree = "<group>"; };
 		61A2A55622D29E1200A56054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61B8108322D45D06003B464A /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +101,6 @@
 			children = (
 				61A2A53422D29E1000A56054 /* AppDelegate.swift */,
 				616B4E6B22D4DA79006728E6 /* ViewController.swift */,
-				61B8108322D45D06003B464A /* NotificationViewController.swift */,
 				616B4E6E22D54F9C006728E6 /* PinViewController.swift */,
 				616B4E6D22D4DA8B006728E6 /* Main.storyboard */,
 				61A2A53B22D29E1200A56054 /* Assets.xcassets */,
@@ -265,7 +262,6 @@
 				616B4E6F22D54F9C006728E6 /* PinViewController.swift in Sources */,
 				616B4E6C22D4DA79006728E6 /* ViewController.swift in Sources */,
 				61A2A53522D29E1000A56054 /* AppDelegate.swift in Sources */,
-				61B8108422D45D06003B464A /* NotificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

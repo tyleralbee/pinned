@@ -19,9 +19,6 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
 
     @IBOutlet weak var homeMap: MKMapView!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,10 +30,6 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
-        
-        
-        // add gesture recognizer
-        
         
         
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(HomeMapController.mapLongPress(_:))) // colon needs to pass through info
@@ -55,8 +48,9 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
             for coord in locationChosen {
                 newPin.coordinate = coord
                 pinSet.append(newPin)
-            
                 
+                //notificationResults.append(newPin.title ?? "derp")
+        
                 for pin in pinSet {
                     homeMap.addAnnotation(pin)
                     print("new objects!")
