@@ -25,18 +25,6 @@ class PinViewController: UIViewController {
         // Do any additional setup after loading the view.
         searchCompleter.delegate = self
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension PinViewController: UISearchBarDelegate {
@@ -61,7 +49,7 @@ extension PinViewController: MKLocalSearchCompleterDelegate {
 
 extension PinViewController : UITableViewDataSource {
     func numberOfRows(inSection: Int) -> Int {
-        return 5
+        return searchResults.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -94,12 +82,9 @@ extension PinViewController: UITableViewDelegate {
         
         search.start { (response, error) in
             let coordinate = response?.mapItems[0].placemark.coordinate
-            print(String(describing: coordinate))
             locationChosen.append(coordinate!)
             self.navigationController?.popViewController(animated: true)
-            //HomeMapController.updateMap()
 
-            
         }
         
     }

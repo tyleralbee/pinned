@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		616B4E6C22D4DA79006728E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616B4E6B22D4DA79006728E6 /* ViewController.swift */; };
 		616B4E6F22D54F9C006728E6 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616B4E6E22D54F9C006728E6 /* PinViewController.swift */; };
-		616B4E7022D55331006728E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 616B4E6D22D4DA8B006728E6 /* Main.storyboard */; };
 		61A2A53522D29E1000A56054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A2A53422D29E1000A56054 /* AppDelegate.swift */; };
 		61A2A53C22D29E1200A56054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61A2A53B22D29E1200A56054 /* Assets.xcassets */; };
 		61A2A53F22D29E1200A56054 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A2A53D22D29E1200A56054 /* LaunchScreen.storyboard */; };
 		61A2A54A22D29E1200A56054 /* pinnedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A2A54922D29E1200A56054 /* pinnedTests.swift */; };
 		61A2A55522D29E1200A56054 /* pinnedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A2A55422D29E1200A56054 /* pinnedUITests.swift */; };
+		61B2A34222E3B2310044C5D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B2A34022E3B2310044C5D5 /* Main.storyboard */; };
+		61B2A34322E3B2310044C5D5 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B2A34122E3B2310044C5D5 /* NotificationTableViewCell.swift */; };
+		61EBE78C22E2F7D100542FA8 /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EBE78B22E2F7D100542FA8 /* NotificationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		616B4E6B22D4DA79006728E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = /Users/tyleralbee/Desktop/pinned/pinned/ViewController.swift; sourceTree = "<absolute>"; };
-		616B4E6D22D4DA8B006728E6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = /Users/tyleralbee/Desktop/pinned/pinned/Main.storyboard; sourceTree = "<absolute>"; };
 		616B4E6E22D54F9C006728E6 /* PinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PinViewController.swift; path = /Users/tyleralbee/Desktop/pinned/pinned/PinViewController.swift; sourceTree = "<absolute>"; };
 		61A2A53122D29E1000A56054 /* pinned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pinned.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A2A53422D29E1000A56054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		61A2A55022D29E1200A56054 /* pinnedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pinnedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A2A55422D29E1200A56054 /* pinnedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinnedUITests.swift; sourceTree = "<group>"; };
 		61A2A55622D29E1200A56054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61B2A34022E3B2310044C5D5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		61B2A34122E3B2310044C5D5 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		61EBE78B22E2F7D100542FA8 /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 		61A2A53322D29E1000A56054 /* pinned */ = {
 			isa = PBXGroup;
 			children = (
+				61B2A34022E3B2310044C5D5 /* Main.storyboard */,
+				61B2A34122E3B2310044C5D5 /* NotificationTableViewCell.swift */,
+				61EBE78B22E2F7D100542FA8 /* NotificationTableViewController.swift */,
 				61A2A53422D29E1000A56054 /* AppDelegate.swift */,
 				616B4E6B22D4DA79006728E6 /* ViewController.swift */,
 				616B4E6E22D54F9C006728E6 /* PinViewController.swift */,
-				616B4E6D22D4DA8B006728E6 /* Main.storyboard */,
 				61A2A53B22D29E1200A56054 /* Assets.xcassets */,
 				61A2A53D22D29E1200A56054 /* LaunchScreen.storyboard */,
 				61A2A54022D29E1200A56054 /* Info.plist */,
@@ -232,7 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				616B4E7022D55331006728E6 /* Main.storyboard in Resources */,
+				61B2A34222E3B2310044C5D5 /* Main.storyboard in Resources */,
 				61A2A53F22D29E1200A56054 /* LaunchScreen.storyboard in Resources */,
 				61A2A53C22D29E1200A56054 /* Assets.xcassets in Resources */,
 			);
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61EBE78C22E2F7D100542FA8 /* NotificationTableViewController.swift in Sources */,
+				61B2A34322E3B2310044C5D5 /* NotificationTableViewCell.swift in Sources */,
 				616B4E6F22D54F9C006728E6 /* PinViewController.swift in Sources */,
 				616B4E6C22D4DA79006728E6 /* ViewController.swift in Sources */,
 				61A2A53522D29E1000A56054 /* AppDelegate.swift in Sources */,

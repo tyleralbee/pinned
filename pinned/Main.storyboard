@@ -30,7 +30,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="r6J-e4-bKD">
-                        <barButtonItem key="leftBarButtonItem" title="Notifications" id="cUD-ym-Ewd"/>
+                        <barButtonItem key="leftBarButtonItem" title="Notifications" id="cUD-ym-Ewd">
+                            <connections>
+                                <segue destination="O05-Sd-8Nv" kind="show" id="HmX-oV-7Bn"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Pin" id="8sW-Gl-siK">
                             <connections>
                                 <segue destination="MkP-We-lrt" kind="show" id="UtS-rx-i7E"/>
@@ -53,6 +57,46 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+        </scene>
+        <!--Notification Table View Controller-->
+        <scene sceneID="EyB-el-uGi">
+            <objects>
+                <tableViewController id="O05-Sd-8Nv" customClass="NotificationTableViewController" customModule="pinned" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TLE-LR-AUO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationTableViewCell" rowHeight="34" id="aVd-3M-96N" customClass="NotificationTableViewCell" customModule="pinned" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="34"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aVd-3M-96N" id="KAD-g2-n3G">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="33.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzR-gK-XGR">
+                                            <rect key="frame" x="186" y="6" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="KAD-g2-n3G" id="Az4-iv-LRS"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="O05-Sd-8Nv" id="LFo-wB-n8A"/>
+                            <outlet property="delegate" destination="O05-Sd-8Nv" id="X4s-gd-Y6o"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7T-Q1-Ols" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.1739130434783" y="808.92857142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U8A-kR-EWD">
