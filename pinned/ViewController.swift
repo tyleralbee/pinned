@@ -35,21 +35,6 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
     
     
     override func viewWillAppear(_ animated: Bool) {
-        for loc in locationChosen{
-            let pinner = MKPointAnnotation()
-            pinner.coordinate = loc
-            print(String(describing: pinner.coordinate))
-            
-            db.collection("pins").addDocument(data: [
-                "latitude" : pinner.coordinate.latitude,
-                "longitude" : pinner.coordinate.longitude
-                
-                
-                ])
-            
-            
-            homeMap.addAnnotation(pinner)
-        }
         
         db.collection("pins").getDocuments() { (querySnapshot, err) in
             if let err = err {

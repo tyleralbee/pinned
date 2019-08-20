@@ -9,7 +9,6 @@ import UIKit
 import MapKit
 
 
-var locationChosen = [CLLocationCoordinate2D]()
 
 class PinViewController: UIViewController {
 
@@ -83,7 +82,19 @@ extension PinViewController: UITableViewDelegate {
         
         search.start { (response, error) in
             let coordinate = response?.mapItems[0].placemark.coordinate
-            locationChosen.append(coordinate!)
+            
+            let pinner = MKPointAnnotation()
+            pinner.coordinate = coordinate!
+            print(String(describing: pinner.coordinate))
+            
+            db.collection("pins").addDocument(data: [
+                "latitude" : pinner.coordinate.latitude,
+                "longitude" : pinner.coordinate.longitude
+                
+                
+                ])
+            
+            print("pin added to firebase!")
             self.navigationController?.popViewController(animated: true)
 
         }
