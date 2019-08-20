@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 
+
 var locationChosen = [CLLocationCoordinate2D]()
 
 class PinViewController: UIViewController {

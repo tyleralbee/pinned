@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import FirebaseDatabase
 //import CoreLocation
 
 var pinSet = [MKPointAnnotation]()
@@ -37,7 +38,38 @@ class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapVi
         for loc in locationChosen{
             let pinner = MKPointAnnotation()
             pinner.coordinate = loc
+            print(String(describing: pinner.coordinate))
+            
+            db.collection("pins").addDocument(data: [
+                "latitude" : pinner.coordinate.latitude,
+                "longitude" : pinner.coordinate.longitude
+                
+                
+                ])
+            
+            
             homeMap.addAnnotation(pinner)
+        }
+        
+        db.collection("pins").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    
+                    let myLat = document.data()["latitude"]
+                    let myLong = document.data()["longitude"]
+                    
+                    let pinner2 = MKPointAnnotation()
+                    pinner2.coordinate.latitude = myLat as! CLLocationDegrees
+                    pinner2.coordinate.longitude = myLong as! CLLocationDegrees
+                    
+                    self.homeMap.addAnnotation(pinner2)
+                    
+                    print("pinner2 added!")
+                }
+            }
         }
     }
     
