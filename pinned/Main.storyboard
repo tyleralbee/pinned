@@ -129,6 +129,7 @@
                     <connections>
                         <outlet property="searchDisplayController" destination="gFw-l6-YmR" id="Vzd-2z-4iF"/>
                         <outlet property="searchResultsTableView" destination="s2R-5H-ANd" id="aPl-2M-8AR"/>
+                        <segue destination="2dd-cU-go5" kind="show" identifier="descriptionSegue" id="8XQ-Di-BPS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oj9-w2-ZKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,6 +144,44 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1886.9565217391305" y="126.5625"/>
+        </scene>
+        <!--Description View Controller-->
+        <scene sceneID="InH-jB-4aT">
+            <objects>
+                <viewController id="2dd-cU-go5" customClass="DescriptionViewController" customModule="pinned" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bkj-BD-elc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jrd-XG-VOz">
+                                <rect key="frame" x="20" y="433" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="descriptionTextField"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSw-9x-h82">
+                                <rect key="frame" x="184" y="471" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="pinButton"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pinButton:" destination="2dd-cU-go5" eventType="touchUpInside" id="2nI-Ag-BTF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Sh1-S4-cMw"/>
+                    </view>
+                    <connections>
+                        <outlet property="description" destination="jrd-XG-VOz" id="Zkm-kl-s4D"/>
+                        <outlet property="descriptionTextField" destination="jrd-XG-VOz" id="7e5-bL-MVm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T60-tV-5a0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2644.9275362318845" y="126.5625"/>
         </scene>
     </scenes>
 </document>

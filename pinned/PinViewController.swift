@@ -25,6 +25,7 @@ class PinViewController: UIViewController {
         // Do any additional setup after loading the view.
         searchCompleter.delegate = self
     }
+    
 }
 
 extension PinViewController: UISearchBarDelegate {
@@ -96,6 +97,7 @@ extension PinViewController: UITableViewDelegate {
             
             print("pin added to firebase!")
             self.navigationController?.popViewController(animated: true)
+            //let descriptionViewController:DescriptionViewController = DescriptionViewController()
 
         }
         

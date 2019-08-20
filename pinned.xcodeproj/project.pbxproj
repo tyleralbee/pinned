@@ -10,6 +10,7 @@
 		1FD1D71D034D80A1044446C2 /* Pods_pinnedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D5D984168DCD0FF1E57495 /* Pods_pinnedTests.framework */; };
 		5BCDEFEE9D7BAC3DFC9D118E /* Pods_pinned.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1164267B8B31019CB1C7E7 /* Pods_pinned.framework */; };
 		61193B43230BA3B70042ADAD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61193B42230BA3B70042ADAD /* NotificationViewController.swift */; };
+		6132FDDA230C980A00EE41D5 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6132FDD9230C980A00EE41D5 /* DescriptionViewController.swift */; };
 		616B4E6C22D4DA79006728E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616B4E6B22D4DA79006728E6 /* ViewController.swift */; };
 		616B4E6F22D54F9C006728E6 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616B4E6E22D54F9C006728E6 /* PinViewController.swift */; };
 		61A2A53522D29E1000A56054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A2A53422D29E1000A56054 /* AppDelegate.swift */; };
@@ -48,6 +49,7 @@
 		4606C8A8CE7CD3710B6B52E4 /* Pods-pinned.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinned.release.xcconfig"; path = "Target Support Files/Pods-pinned/Pods-pinned.release.xcconfig"; sourceTree = "<group>"; };
 		5D4849D125605AF8F35BDFD3 /* Pods-pinnedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinnedUITests.release.xcconfig"; path = "Target Support Files/Pods-pinnedUITests/Pods-pinnedUITests.release.xcconfig"; sourceTree = "<group>"; };
 		61193B42230BA3B70042ADAD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		6132FDD9230C980A00EE41D5 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		616B4E6B22D4DA79006728E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = /Users/tyleralbee/Desktop/pinned/pinned/ViewController.swift; sourceTree = "<absolute>"; };
 		616B4E6E22D54F9C006728E6 /* PinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PinViewController.swift; path = /Users/tyleralbee/Desktop/pinned/pinned/PinViewController.swift; sourceTree = "<absolute>"; };
 		61A2A53122D29E1000A56054 /* pinned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pinned.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 				616B4E6B22D4DA79006728E6 /* ViewController.swift */,
 				616B4E6E22D54F9C006728E6 /* PinViewController.swift */,
 				61193B42230BA3B70042ADAD /* NotificationViewController.swift */,
+				6132FDD9230C980A00EE41D5 /* DescriptionViewController.swift */,
 				61A2A53B22D29E1200A56054 /* Assets.xcassets */,
 				61A2A53D22D29E1200A56054 /* LaunchScreen.storyboard */,
 				61A2A54022D29E1200A56054 /* Info.plist */,
@@ -403,6 +406,7 @@
 				616B4E6F22D54F9C006728E6 /* PinViewController.swift in Sources */,
 				616B4E6C22D4DA79006728E6 /* ViewController.swift in Sources */,
 				61193B43230BA3B70042ADAD /* NotificationViewController.swift in Sources */,
+				6132FDDA230C980A00EE41D5 /* DescriptionViewController.swift in Sources */,
 				61A2A53522D29E1000A56054 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
