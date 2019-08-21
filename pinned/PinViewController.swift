@@ -74,6 +74,8 @@ extension PinViewController : UITableViewDataSource {
 extension PinViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
         tableView.deselectRow(at: indexPath, animated: true)
         
         let completion = searchResults[indexPath.row]
@@ -83,6 +85,7 @@ extension PinViewController: UITableViewDelegate {
         
         search.start { (response, error) in
             let coordinate = response?.mapItems[0].placemark.coordinate
+            
             
             let pinner = MKPointAnnotation()
             pinner.coordinate = coordinate!
@@ -96,7 +99,13 @@ extension PinViewController: UITableViewDelegate {
                 ])
             
             print("pin added to firebase!")
-            self.navigationController?.popViewController(animated: true)
+            
+            guard let destinationViewController = mainStoryBoard.instantiateViewController(withIdentifier: "DescriptionViewController") as? DescriptionViewController else {
+                print("couldn't find view controller")
+                return
+            }
+            
+            self.navigationController?.pushViewController(destinationViewController, animated: true)
             //let descriptionViewController:DescriptionViewController = DescriptionViewController()
 
         }

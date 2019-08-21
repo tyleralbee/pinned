@@ -9,14 +9,17 @@
 import UIKit
 
 class DescriptionViewController: UIViewController {
-
-    @IBOutlet weak var descriptionTextField: UITextField!
-    
-    
     @IBAction func pinButton(_ sender: Any) {
-        let homeViewController:HomeMapController = HomeMapController()
-        self.present(homeViewController, animated: true, completion: nil)
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let destinationViewController = mainStoryBoard.instantiateViewController(withIdentifier: "HomeMapController") as? HomeMapController else {
+            print("couldn't find view controller")
+            return
+        }
+        
+        self.navigationController?.pushViewController(destinationViewController, animated: true)
     }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

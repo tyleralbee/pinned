@@ -13,7 +13,7 @@
         <!--Home Map Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeMapController" customModule="pinned" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeMapController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeMapController" customModule="pinned" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,7 +148,7 @@
         <!--Description View Controller-->
         <scene sceneID="InH-jB-4aT">
             <objects>
-                <viewController id="2dd-cU-go5" customClass="DescriptionViewController" customModule="pinned" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DescriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2dd-cU-go5" customClass="DescriptionViewController" customModule="pinned" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bkj-BD-elc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,17 +167,13 @@
                                 <accessibility key="accessibilityConfiguration" identifier="pinButton"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="pinButton:" destination="2dd-cU-go5" eventType="touchUpInside" id="2nI-Ag-BTF"/>
+                                    <action selector="pinButton:" destination="2dd-cU-go5" eventType="touchUpInside" id="mbD-6P-NVx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Sh1-S4-cMw"/>
                     </view>
-                    <connections>
-                        <outlet property="description" destination="jrd-XG-VOz" id="Zkm-kl-s4D"/>
-                        <outlet property="descriptionTextField" destination="jrd-XG-VOz" id="7e5-bL-MVm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T60-tV-5a0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
