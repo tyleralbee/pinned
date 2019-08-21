@@ -9,12 +9,26 @@
 import UIKit
 
 class DescriptionViewController: UIViewController {
+    @IBOutlet weak var descriptionTextField: UITextField!
     @IBAction func pinButton(_ sender: Any) {
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let destinationViewController = mainStoryBoard.instantiateViewController(withIdentifier: "HomeMapController") as? HomeMapController else {
             print("couldn't find view controller")
             return
         }
+        
+        toPin.description = descriptionTextField.text!
+        
+        db.collection("pins").addDocument(data: [
+            "latitude" : toPin.latitude,
+            "longitude" : toPin.longitude,
+            "description" : toPin.description
+            
+            
+            
+            ])
+        
+        print("pin added to firebase!")
         
         self.navigationController?.pushViewController(destinationViewController, animated: true)
     }

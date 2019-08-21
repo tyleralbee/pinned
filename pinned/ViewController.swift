@@ -11,7 +11,13 @@ import MapKit
 import FirebaseDatabase
 //import CoreLocation
 
-var pinSet = [MKPointAnnotation]()
+struct Pin {
+    var latitude : Double = 0.0
+    var longitude : Double = 0.0
+    var description : String = ""
+}
+
+var toPin = Pin()
 
 
 class HomeMapController : UIViewController , CLLocationManagerDelegate , MKMapViewDelegate {

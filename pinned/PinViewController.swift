@@ -91,14 +91,12 @@ extension PinViewController: UITableViewDelegate {
             pinner.coordinate = coordinate!
             print(String(describing: pinner.coordinate))
             
-            db.collection("pins").addDocument(data: [
-                "latitude" : pinner.coordinate.latitude,
-                "longitude" : pinner.coordinate.longitude
-                
-                
-                ])
+
             
-            print("pin added to firebase!")
+            toPin.latitude = pinner.coordinate.latitude
+            toPin.longitude = pinner.coordinate.longitude
+            
+            
             
             guard let destinationViewController = mainStoryBoard.instantiateViewController(withIdentifier: "DescriptionViewController") as? DescriptionViewController else {
                 print("couldn't find view controller")
